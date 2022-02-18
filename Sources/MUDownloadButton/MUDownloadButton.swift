@@ -45,6 +45,12 @@ public final class MUDownloadButton: UIView {
         return button
     }
     
+    // MARK: - CallBacks
+    
+    // MARK: - Delegate and GCD
+    let animationDispatchGroup = DispatchGroup()
+    let animationQueue = DispatchQueue(label: "MUDownloadButtonAnimationQueue")
+    
     // MARK: - Inits
     
     public override init(frame: CGRect) {
@@ -60,19 +66,42 @@ public final class MUDownloadButton: UIView {
     }
     
     private func commonInit() {
+        self.backgroundColor = .red
         /// add subviews and add constraints
         self.addSubview(idleButton)
-        
+        self.setIdleButtonConstraints()
         
         self.addSubview(waitingView)
-        
-        
+        self.setWaitingButtonConstraints()
+    
         
         self.addSubview(downloadingButton)
-        
-        
+        self.setDownloadingButtonConstraints()
         
         self.addSubview(downloadedButton)
+        self.setDownloadedButtonConstraints()
+    }
+    
+    
+    // MARK: - Setup Constraitns
+    internal func setIdleButtonConstraints() {
+        idleButton.pinToSuperview()
+    }
+    internal func setWaitingButtonConstraints() {
+        waitingView.pinToSuperview()
+    }
+    internal func setDownloadingButtonConstraints() {
+        downloadingButton.pinToSuperview()
+    }
+    internal func setDownloadedButtonConstraints() {
+        downloadedButton.pinToSuperview()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func currentButtonTapped() {
+        currentState = .downloaded
     }
 }
 
