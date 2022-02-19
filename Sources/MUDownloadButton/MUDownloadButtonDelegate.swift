@@ -12,7 +12,7 @@ public protocol MUDownloadButtonDelegate {
     func muDownloadButton( _ : MUDownloadButton , stateDidChangeTo : MUDownloadButton.State)
     func muDownloadButton( _ :MUDownloadButton , didTapWithState : MUDownloadButton.State)
 }
-public extension MUDownloadButtonDelegate {
+extension MUDownloadButtonDelegate {
     func didTapButton ( _ : MUDownloadButton , state : MUDownloadButton.State){}
     func muDownloadButton( _ : MUDownloadButton , stateDidChangeTo : MUDownloadButton.State){}
     func muDownloadButton( _ :MUDownloadButton , didTapWithState : MUDownloadButton.State){}
