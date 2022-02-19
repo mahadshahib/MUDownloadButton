@@ -30,6 +30,14 @@ extension UIView {
         let trailingConstraint = self.constraint(attribute: .trailing, toItem: superview, toAttribute: .trailing)
         NSLayoutConstraint.activate([trailingConstraint, topConstraint, leadingConstraint, bottomConstraint])
     }
+    func pinToSuperview(constant:CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        let topConstraint = self.constraint(attribute: .top, toItem: superview, toAttribute: .top,constant: constant)
+        let bottomConstraint = self.constraint(attribute: .bottom, toItem: superview, toAttribute: .bottom,constant: -constant)
+        let leadingConstraint = constraint(attribute: .leading, toItem: superview, toAttribute: .leading,constant: -constant)
+        let trailingConstraint = self.constraint(attribute: .trailing, toItem: superview, toAttribute: .trailing,constant: constant)
+        NSLayoutConstraint.activate([trailingConstraint, topConstraint, leadingConstraint, bottomConstraint])
+    }
     
     func centerToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false

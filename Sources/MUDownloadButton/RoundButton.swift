@@ -11,33 +11,9 @@ final class RoundButton: UIButton {
     
     // MARK: Properties
     
-    var highlightedBackgroundColor = UIColor.lightGray {
+    var image = UIImage(systemName: "arrow.down.circle") {
         didSet {
-            updateColors()
-        }
-    }
-    
-    var nonhighlightedBackgroundColor = UIColor.systemGray3 {
-        didSet {
-            updateColors()
-        }
-    }
-    
-    var highlightedTitleColor = UIColor.systemBlue {
-        didSet {
-            updateColors()
-        }
-    }
-    
-    var nonhighlightedTitleColor = UIColor.systemBlue {
-        didSet {
-            updateColors()
-        }
-    }
-
-    override var isHighlighted: Bool {
-        didSet {
-            updateColors()
+            commonInit()
         }
     }
 
@@ -45,22 +21,21 @@ final class RoundButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        updateColors()
+        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        updateColors()
+        commonInit()
     }
     
     // MARK: Helper methods
 
-    private func updateColors() {
-        backgroundColor = isHighlighted ? highlightedBackgroundColor : nonhighlightedBackgroundColor
-        let titleColor = isHighlighted ? highlightedTitleColor : nonhighlightedTitleColor
-        setTitleColor(titleColor, for: .normal)
+    private func commonInit() {
+        self.setBackgroundImage(image, for: .normal)
+
     }
-    
+   
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = frame.height / 2
