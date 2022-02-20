@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MUDownloadButton",
+        "repositoryURL": "https://github.com/mahadshahib/MUDownloadButton.git",
+        "state": {
+          "branch": "main",
+          "revision": "672ce0229f2e3c255bda45aaade9ec011d04b08a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
