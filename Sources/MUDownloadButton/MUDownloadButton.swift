@@ -78,7 +78,7 @@ public final class MUDownloadButton: UIView {
     // MARK: - CallBacks
     
     // MARK: - Delegate and GCD
-    var delegate : MUDownloadButtonDelegate?
+   public var delegate : MUDownloadButtonDelegate?
     let animationDispatchGroup = DispatchGroup()
     let animationQueue = DispatchQueue(label: "MUDownloadButtonAnimationQueue")
     
