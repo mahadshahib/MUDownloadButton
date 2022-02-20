@@ -1,7 +1,6 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
-
     <a href="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange">
         <img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange" alt="SPM compatible">
     </a>
