@@ -56,7 +56,7 @@ You can use the `MUDownloadButtonDelegate` to monitor taps on button and state c
 
 ## Demo
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run the Demo directory 
 
 ## Installation
  Currently only supports SPM and iOS 13+
