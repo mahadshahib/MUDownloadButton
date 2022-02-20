@@ -42,7 +42,7 @@ public final class MUDownloadButton: UIView {
         didSet {
             // MARK: - Current State Changed
             let delay : TimeInterval = 0
-            self.delegate?.muDownloadButton(self, stateDidChangeTo: currentState)
+            
             animationQueue.async { [self] in
                 animationDispatchGroup.enter()
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
