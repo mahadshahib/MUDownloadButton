@@ -11,7 +11,7 @@
 
 **MUDownloadButton** is a Progressive Download button written in pure swift and inspired by AppStore download button . feel free to contribute and pull requests
 
-<p align="center"><img src="https://raw.githubusercontent.com/amerhukic/AHDownloadButton/master/Demo.gif"/>
+<p align="center"><img src="demo.gif"/>
 </p>
 
 ## Requirements
