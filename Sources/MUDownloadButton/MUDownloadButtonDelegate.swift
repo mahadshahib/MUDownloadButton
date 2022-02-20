@@ -12,6 +12,7 @@ public protocol MUDownloadButtonDelegate {
     func didTapButton ( _ : MUDownloadButton , state : MUDownloadButton.State)
    
 }
+@available(iOS 13.0, *)
 extension MUDownloadButtonDelegate {
     @available(iOS 13.0, *)
     func didTapButton ( _ : MUDownloadButton , state : MUDownloadButton.State){}
