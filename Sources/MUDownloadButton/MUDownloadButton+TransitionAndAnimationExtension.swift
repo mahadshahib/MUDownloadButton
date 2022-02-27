@@ -57,7 +57,7 @@ extension MUDownloadButton {
             self.idleButton.alpha = 0
         } completion: { completed in
             completionHandler(completed)
-            self.downloadedButton.alpha = 1
+            self.downloadingButton.alpha = 1
         }
     }
     func handleTransitionFromWaitingToIdle(completionHandler: @escaping (Bool) -> Void) {
